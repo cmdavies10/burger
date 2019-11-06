@@ -2,6 +2,21 @@ $(function() {
     $(".devoured").on("click", function(event) {
         var id = $(this).data("id");
         console.log(id);
+
+        // var newState = $(this).data("state");
+        // console.log(newState);
+
+        var newStateDevour = {
+            devoured: true
+        }
+
+        $.ajax("/api/burgers/" + id, {
+            type: "PUT",
+            data: newStateDevour
+        }).then(function() {
+            console.log("changed devour to", newState);
+            location.reload();
+        });
     });
 
     $("#add-burger").on("click", function(event) {
