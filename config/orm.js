@@ -47,7 +47,7 @@ var orm = {
         });
     },
     // insertOne()
-    insertOne: function(table, cols, vals, cb) {
+    createOne: function(table, cols, vals, cb) {
         var queryString = "INSERT INTO " + table;
 
         queryString += " (";
@@ -63,9 +63,9 @@ var orm = {
             if (err) {
                 throw err;
             }
-            cb(result);
-        })
 
+            cb(result);
+        });
     },
     // updateOne()
     updateOne: function(table, objColVals, condition, cb) {
