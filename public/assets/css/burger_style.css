@@ -2,3 +2,9 @@
     background-color: black;
     color: white;
 }
+
+.wrapper,
+.style {
+    background-color: #f5b869;
+    color: black;
+}

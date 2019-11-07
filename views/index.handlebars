@@ -2,46 +2,48 @@
   <img src="../assets/img/eatdaburger.png" alt="burger">
 </div>
 
-<div class="container">
-    <div class="row">
-        <h2>Wish List: </h2>
+<div class="wrapper">
+    <div class="container">
+        <div class="row">
+            <h2>Wish List: </h2>
 
-        <ul>
-            {{#each burgers}}
-                {{#unless devoured}}
-                    {{> burgers/burger-list devoured=true}}
-                {{/unless}}
-            {{/each}}
-        </ul>
+            <ul>
+                {{#each burgers}}
+                    {{#unless devoured}}
+                        {{> burgers/burger-list devoured=true}}
+                    {{/unless}}
+                {{/each}}
+            </ul>
 
-    </div>
+        </div>
 
-    <br>
-    <hr>
-    <br>
-
-    <div class="row">
-        <h2>Devoured: </h2>
-        <ul>
-            {{#each burgers}}
-                {{#if devoured}}
-                    {{> burgers/burger-eaten}}
-                {{/if}}
-            {{/each}}
-        </ul>
-    </div>
-
-    <br>
-    <hr>
-    <br>
-
-    <h3>Add Burger:</h3>
-    <form class="add-form">
-        <label for="burger">Burger Name: </label>
-        <input class="form-control" type="text" id="burger" placeholder="Enter Burger Name">
         <br>
-        <button type="submit" class="btn btn-primary" id="add-burger">Add Burger</button>
-    </form>
+        <hr>
+        <br>
 
+        <div class="row">
+            <h2>Devoured: </h2>
+            <ul>
+                {{#each burgers}}
+                    {{#if devoured}}
+                        {{> burgers/burger-eaten}}
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h3>Add Burger:</h3>
+        <form class="add-form">
+            <label for="burger">Burger Name: </label>
+            <input class="form-control" type="text" id="burger" placeholder="Enter Burger Name">
+            <br>
+            <button type="submit" class="btn btn-primary" id="add-burger">Add Burger</button>
+        </form>
+
+    </div>
 </div>
 
