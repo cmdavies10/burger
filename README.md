@@ -1,6 +1,6 @@
 # EAT-DA-BURGER
 
-![logo](/img/eatdaburger.png)
+![logo](https://github.com/cmdavies10/burger/blob/master/public/assets/img/eatdaburger.png)
 
 ### OVERVIEW
 
